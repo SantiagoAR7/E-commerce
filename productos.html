@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>VirtuCode - Productos</h1>
+        <nav>
+            <ul>
+                <a href="index.html">Inicio</a> |
+                <a href="productos.html">Productos</a> |
+                <a href="contacto.html">Contacto</a> |
+                
+            </ul>    
+        </nav>
+
+        <div class="boton-login">
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+
+        <div class="boton-busqueda">
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Buscar productos...">
+                <button type="button" onclick="searchProducts()">Buscar</button>
+            </form>
+        </div>
+            
+    </header>
+    <div>
+        <p>Enamorate de los productos y cuentale a todo el mundo de nuestras excelentes promociones.</p>
+    </div>
+
+    <main>
+        <div class="productos">
+            <table class="product-table">
+                <tr>
+                    <td class="product-info">
+                        PlayStation 4 Slim<br>
+                        <img src="imagenes/play4.jpg" alt="PlayStation 4 Slim" width="40%">
+                        <br>$1'400.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity1')">-</button>
+                            <span id="quantity1">1</span>
+                            <button onclick="increaseQuantity('quantity1')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('PlayStation 4 Slim', '1.400.000', 'quantity1')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr> 
+                    <td class="product-info">
+                        PlayStation 5 Digital 1 tera<br>
+                        <img src="imagenes/Play5.jpg" alt="PlayStation 5" width="30%">
+                        <br>$2'400.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity2')">-</button>
+                            <span id="quantity2">1</span>
+                            <button onclick="increaseQuantity('quantity2')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('PlayStation 5', '2.400.000', 'quantity2')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Nintendo Switch<br>
+                        <img src="imagenes/NintendoSS.jpg" alt="Nintendo Switch" width="30%">
+                        <br>$1'800.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity3')">-</button>
+                            <span id="quantity3">1</span>
+                            <button onclick="increaseQuantity('quantity3')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Nintendo Switch', '1.800.000', 'quantity3')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Xbox Series X Disco 1T<br>
+                        <img src="imagenes/XboxXX.jpg" alt="Xbox Series X" width="30%">
+                        <br>$2'300.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity4')">-</button>
+                            <span id="quantity4">1</span>
+                            <button onclick="increaseQuantity('quantity4')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Xbox Series X', '2.300.000', 'quantity4')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Xbox Series S<br>
+                        <img src="imagenes/XboxS.jpg" alt="Xbox Series S" width="30%">
+                        <br>$1'900.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity5')">-</button>
+                            <span id="quantity5">1</span>
+                            <button onclick="increaseQuantity('quantity5')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Xbox Series S', '$1.900.000', 'quantity5')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Control Xbox Series X/S<br>
+                        <img src="imagenes/ControlXbox.jpg" alt="Control Xbox Series X/S" width="30%">
+                        <br>$235.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity6')">-</button>
+                            <span id="quantity6">1</span>
+                            <button onclick="increaseQuantity('quantity6')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Control Xbox Series X/S', '235.000', 'quantity6')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Control PlayStation 4<br>
+                        <img src="imagenes/ControlPLay4.jpg" alt="Control PlayStation 4" width="30%">
+                        <br>$300.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity7')">-</button>
+                            <span id="quantity7">1</span>
+                            <button onclick="increaseQuantity('quantity7')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Control PlayStation 4', '300.000', 'quantity7')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Control PlayStation 5<br>
+                        <img src="imagenes/ControlPlay5.jpg" alt="Control PlayStation 5" width="30%">
+                        <br>$345.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity8')">-</button>
+                            <span id="quantity8">1</span>
+                            <button onclick="increaseQuantity('quantity8')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Control PlayStation 5', '345.000', 'quantity8')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Control Nintendo Switch<br>
+                        <img src="imagenes/ControlNintendo.jpg" alt="Control Nintendo Switch" width="30%">
+                        <br>$305.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity9')">-</button>
+                            <span id="quantity9">1</span>
+                            <button onclick="increaseQuantity('quantity9')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Control Nintendo Switch', '305.000', 'quantity9')">Agregar</button>
+                    </td>
+                <tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Apple Vision Pro<br>
+                        <img src="imagenes/AppleVisionPro.jpg" alt="Apple Vision Pro" width="30%">
+                        <br>$13'735.960
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity10')">-</button>
+                            <span id="quantity10">1</span>
+                            <button onclick="increaseQuantity('quantity10')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Apple Vision Pro', '13.735.960', 'quantity10')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        PlayStation VR<br>
+                        <img src="imagenes/PsVR.jpg" alt="PlayStation VR" width="30%">
+                        <br>$3'529.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity11')">-</button>
+                            <span id="quantity11">1</span>
+                            <button onclick="increaseQuantity('quantity11')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('PlayStation VR', '3.529.000', 'quantity11')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        PSP VITA<br>
+                        <img src="imagenes/PSP.jpg" alt="PlayStation Portatil" width="30%">
+                        <br>$2'000.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity12')">-</button>
+                            <span id="quantity12">1</span>
+                            <button onclick="increaseQuantity('quantity12')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('PlayStation Portatil', '2.000.000', 'quantity12')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Iphone 15 Pro Max 512GB<br>
+                        <img src="imagenes/Iphone15.jpg" alt="Iphone 15 Pro Max 512GB" width="30%">
+                        <br>$7'900.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity13')">-</button>
+                            <span id="quantity13">1</span>
+                            <button onclick="increaseQuantity('quantity13')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Iphone 15 Pro Max 512GB', '7.900.000', 'quantity13')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Iphone 14 Pro Max 512GB<br>
+                        <img src="imagenes/Iphone14.jpg" alt="Iphone 14 Pro Max 512GB" width="30%">
+                        <br>$5'700.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity14')">-</button>
+                            <span id="quantity14">1</span>
+                            <button onclick="increaseQuantity('quantity14')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Iphone 14 Pro Max 512GB', '5.700.000', 'quantity14')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Iphone 13 Pro Max 512GB<br>
+                        <img src="imagenes/Iphone13.jpg" alt="Iphone 13 Pro Max 512GB" width="30%">
+                        <br>$3'800.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity14')">-</button>
+                            <span id="quantity14">1</span>
+                            <button onclick="increaseQuantity('quantity14')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Iphone 13 Pro Max 512GB', '3.800.000', 'quantity14')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Iphone 12 Pro Max 512GB<br>
+                        <img src="imagenes/Iphone12.jpg" alt="Iphone 12 Pro Max 512GB" width="30%">
+                        <br>$3'400.000
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity15')">-</button>
+                            <span id="quantity15">1</span>
+                            <button onclick="increaseQuantity('quantity15')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Iphone 15 Pro Max 512GB', '3.400.000', 'quantity15')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="product-info">
+                        Apple Watch Ultra<br>
+                        <img src="imagenes/AppleWatch.jpg" alt="Apple Watch Ultra" width="30%">
+                        <br>$3'135.723
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('quantity16')">-</button>
+                            <span id="quantity16">1</span>
+                            <button onclick="increaseQuantity('quantity16')">+</button>
+                        </div>
+                        <button class="add-to-cart-button" onclick="addToCart('Apple Watch Ultra', '3.135.723', 'quantity16')">Agregar</button>
+                    </td>
+                </tr>
+            </table>
+            <!-- Puedes agregar más filas según sea necesario para otros productos -->
+            </table>
+        </div>
+      </main>
+
+    <footer>
+        <section id="footer-info">
+            <p class="copyright">&copy Copyright VirtuCode - 2024</p>
+        </section> 
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
